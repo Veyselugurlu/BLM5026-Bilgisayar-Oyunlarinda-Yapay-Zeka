@@ -6,13 +6,15 @@
 
 Bu depo dersin haftalık uygulamalarını içerir. Her hafta ayrı bir `feature/...` dalında geliştirilir ve Pull Request ile `main` dalına birleştirilir.
 
-| Hafta | Konu | Dal | Rapor |
-|---|---|---|---|
-| 5 | Unity ML-Agents: kurulum, Basic örneği, RollerAgent (kendi RL ortamımız) | `feature/week05-ml-agents` | [docs/week05](docs/week05/README.md) |
+| Rapor | Hafta | Konu | Dal | Klasör |
+|---|---|---|---|---|
+| **Rapor 4** | 5 | Unity ML-Agents: kurulum, Basic örneği, RollerAgent (kendi RL ortamımız) | `feature/week05-ml-agents` | [docs/week05](docs/week05/README.md) |
+
+*1. hafta için rapor istenmediğinden rapor numaraları haftadan bir eksiktir (Hafta 5 = Rapor 4).*
 
 ---
 
-## Hafta 5: Unity ML-Agents ile pekiştirmeli öğrenme
+## Rapor 4 (Hafta 5): Unity ML-Agents ile pekiştirmeli öğrenme
 
 ![Eğitilmiş ajan](docs/week05/images/trained_agent.gif)
 
@@ -24,7 +26,7 @@ Yeşil top (ajan) turuncu küpe (hedef) ulaşmayı deneme yanılma ile öğreniy
 | Sunu 2: RollerAgent | Ortam sıfırdan kuruldu. Eğitilmiş PPO aynı 200 başlangıç koşulunda **%93.2 ± 11.4** başarı aldı (3 seed); rastgele politika %21.5 |
 | Challenge: ablasyon | Göreli gözlem (Deney B), yeni başlangıç konumlarında başarıyı **%48 → %96.5** çıkardı |
 
-Ayrıntılı rapor: **[docs/week05/README.md](docs/week05/README.md)** · Word raporu: [docs/week05/Hafta05_ML-Agents_Rapor.docx](docs/week05/Hafta05_ML-Agents_Rapor.docx)
+Ayrıntılı rapor: **[docs/week05/README.md](docs/week05/README.md)** · Word raporu: [docs/week05/Rapor4_Hafta5_ML-Agents.docx](docs/week05/Rapor4_Hafta5_ML-Agents.docx)
 
 ### Projeyi açma
 
