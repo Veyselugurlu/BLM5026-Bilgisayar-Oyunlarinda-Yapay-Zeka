@@ -52,7 +52,10 @@ function pngSize(file) {
   return { w: b.readUInt32BE(16), h: b.readUInt32BE(20) };
 }
 
-function figure(file, caption, widthPx = 600) {
+let figNo = 0;
+const figIds = {};
+function figure(file, caption, widthPx = 600, id = null, numbered = true) {
+  if (numbered) { figNo += 1; if (id) figIds[id] = figNo; caption = `Şekil ${figNo}. ${caption}`; }
   const full = path.join(IMG, file);
   const { w, h } = pngSize(full);
   return [
@@ -116,10 +119,10 @@ const cover = [
   new Paragraph({ spacing: { before: 1200, after: 120 }, alignment: AlignmentType.CENTER, children: [t("BURSA TEKNİK ÜNİVERSİTESİ", { bold: true, size: 28, color: BLUE })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [t("Lisansüstü Eğitim Enstitüsü · Bilgisayar Mühendisliği Yüksek Lisans", { size: 22 })] }),
   new Paragraph({ spacing: { before: 600 }, alignment: AlignmentType.CENTER, children: [t("BLM5026 Bilgisayar Oyunlarında Yapay Zeka", { size: 26, color: "444444" })] }),
-  new Paragraph({ spacing: { before: 300, after: 120 }, alignment: AlignmentType.CENTER, children: [t("Hafta 5 Raporu", { bold: true, size: 44, color: BLUE })] }),
+  new Paragraph({ spacing: { before: 300, after: 120 }, alignment: AlignmentType.CENTER, children: [t("Rapor 4 (Hafta 5)", { bold: true, size: 44, color: BLUE })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [t("Unity ML-Agents ile Pekiştirmeli Öğrenme:", { bold: true, size: 32 })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 }, children: [t("Kurulum, Basic Örneği ve Kendi RollerAgent Ortamımız", { bold: true, size: 32 })] }),
-  ...figure("scene_perspective.png", "RollerAgent ortamı: yeşil top (ajan) turuncu küpe (hedef) ulaşmayı öğreniyor", 430),
+  ...figure("scene_perspective.png", "RollerAgent ortamı: yeşil top (ajan) turuncu küpe (hedef) ulaşmayı öğreniyor", 430, null, false),
   new Paragraph({ spacing: { before: 400 }, alignment: AlignmentType.CENTER, children: [B("Öğrenci: "), t("Veysel Uğurlu")] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Öğrenci No: "), t("……………………")] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Dersi Veren: "), t("Doç. Dr. İzzet Fatih Şentürk")] }),
@@ -136,7 +139,7 @@ const toc = [
 
 const ozet = [
   H1("Özet"),
-  P("Bu raporda dersin 5. haftasında işlenen Unity ML-Agents konusunun uygulaması anlatılmaktadır. Amaç, bir oyun karakterine bir görevi kurallarını tek tek kodlamadan, deneme yanılma yoluyla (pekiştirmeli öğrenme) öğretmektir."),
+  P("Bu raporda (Rapor 4) dersin 5. haftasında işlenen Unity ML-Agents konusunun uygulaması anlatılmaktadır. Amaç, bir oyun karakterine bir görevi kurallarını tek tek kodlamadan, deneme yanılma yoluyla (pekiştirmeli öğrenme) öğretmektir."),
   P("İlk aşamada (Sunu 1) ML-Agents 4.1.0 kaynak koddan kurulmuş, sürüm uyumu doğrulanmış ve resmi Basic örneği PPO algoritmasıyla eğitilmiştir. Basic ajanı yaklaşık 12.000 adımda teorik olarak en iyi ödül olan 0.93'e ulaşmıştır."),
   P([t("İkinci aşamada (Sunu 2) RollerAgent ortamı sıfırdan kurulmuştur: yeşil bir küre, turuncu bir küpe ulaşmayı öğrenir. Eğitilen model aynı 200 başlangıç koşulunda test edilmiştir. Eğitimsiz rastgele politika %"), t(pct(fixed.random.success_rate.mean)),
     t(" başarı gösterirken, eğitilmiş PPO politikası 3 farklı seed üzerinden ortalama %"), B(pm(fixed.ppo_Absolute8.success_rate)), t(" başarıya ulaşmıştır. En iyi seed %100 başarıya ulaşmıştır.")]),
@@ -166,7 +169,7 @@ const giris = [
   ], [2000, 3626, 3400], "Tablo 1. Temel kavramlar"),
   H2("1.3 ML-Agents mimarisi"),
   P("ML-Agents iki parçadan oluşur. Unity tarafı deneyim üretir: sahne, fizik, ajanın gözlemleri ve ödülleri. Python tarafındaki mlagents-learn programı bu deneyimleri toplayıp PPO ile sinir ağını günceller. İki taraf bir ağ bağlantısı (gRPC) üzerinden haberleşir. Eğitim bitince sinir ağı bir .onnx dosyasına yazılır. Bu dosya Unity'deki Behavior Parameters bileşenine verildiğinde ajan artık Python olmadan çalışır."),
-  ...figure("diagram_rl_loop.png", "Şekil 1. Unity ile Python eğitim programı arasındaki öğrenme döngüsü"),
+  ...figure("diagram_rl_loop.png", "Unity ile Python eğitim programı arasındaki öğrenme döngüsü"),
 ];
 
 const kurulum = [
@@ -192,6 +195,7 @@ const kurulum = [
   ...code(["python -m pip install ./ml-agents-envs", "python -m pip install ./ml-agents", "mlagents-learn --help"]),
   num("Unity 6.3 projesi Universal 3D şablonuyla oluşturuldu ve ML-Agents 4.1.0 paketi eklendi."),
   note([B("Doğrulama: "), t("Projede paket, Unity Package Registry'den (4.1.0) yüklendi. Bu paketin Runtime/ klasörü, klonlanan kaynaktaki com.unity.ml-agents/Runtime ile diff aracıyla karşılaştırıldı. Satır sonu (CRLF/LF) dışında hiçbir fark bulunmadı. Yani Unity tarafı ile Python tarafı aynı kaynak revizyonuna aittir.")]),
+  ...figure("editor/04_package_manager.png", "Unity Package Manager: projede ML Agents 4.1.0 (Unity Registry) yüklü"),
 ];
 
 const basic = [
@@ -207,7 +211,7 @@ const basic = [
   bullet([B("Bağlantı: "), C("Connected to Unity environment with package version 4.1.0 and communication version 1.5.0")]),
   bullet([B("Adım ilerlemesi: "), C("Step: 2000 … Mean Reward: 0.129"), t(" → "), C("Step: 12000 … Mean Reward: 0.925")]),
   bullet([B("Üretilen dosyalar: "), C("results/Basic_U63_01/"), t(" altında Basic.onnx, checkpoint.pt, TensorBoard event dosyası, configuration.yaml ve run_logs/")]),
-  ...figure("basic_training_curve.png", "Şekil 2. Basic ortamında ortalama ödül; yeşil kesikli çizgi teorik en iyi değer (0.93)"),
+  ...figure("basic_training_curve.png", "Basic ortamında ortalama ödül; yeşil kesikli çizgi teorik en iyi değer (0.93)"),
   P("Behavior Name eşleşmesi: Unity'deki Behavior Parameters → Behavior Name değeri \"Basic\", YAML'daki behaviors: anahtarı da \"Basic\". Bu ikisi eşleşmezse trainer \"behavior bulunamadı\" hatası verir."),
 ];
 
@@ -255,13 +259,13 @@ const roller = [
   H2("4.2 Sahne"),
   P("Tüm nesneler tek bir TrainingArea altında gruplandı. Bu sayede alan kopyalanarak paralel eğitim yapılabilir. Sahne, yazdığımız bir Editor scripti (RollerBallSceneBuilder.cs, menü: ML Agents Course → 1. Build RollerBall Training Scene) ile tek tıkla, her seferinde aynı şekilde üretilebilir."),
   ...code(["TrainingArea", " ├─ Floor        Plane 10x10, MeshCollider, mavi", " ├─ Target       Cube, turuncu, local (3, 0.5, 3), BoxCollider", " └─ RollerAgent  Sphere, yeşil, local (0, 0.5, 0)", "      Rigidbody · Behavior Parameters · Decision Requester · RollerBallAgent.cs"]),
-  ...figure("scene_game_view.png", "Şekil 3. Oyun kamerasından RollerBallTraining sahnesi", 470),
+  ...figure("scene_game_view.png", "Oyun kamerasından RollerBallTraining sahnesi", 470),
   P("Ajan bir Rigidbody ile fizik motoruna bağlıdır. Sunuda vurgulandığı gibi, dinamik bir Rigidbody her karede transform.position ile değil, kuvvet uygulanarak hareket ettirilir. Böylece momentum, sürtünme ve düşme gibi etkileri fizik motoru hesaplar."),
   H2("4.3 Ajan kodu (RollerBallAgent.cs)"),
   P("Ajan sınıfı MonoBehaviour yerine ML-Agents'ın Agent sınıfından türetilir ve dört metodu doldurur. Kodun özü aşağıdadır; tamamı GitHub deposundadır."),
   ...code(agentCode),
-  ...figure("diagram_episode_flow.png", "Şekil 4. Bir episode boyunca çağrılan metotlar"),
-  ...figure("diagram_observation_vector.png", "Şekil 5. Ajanın her adımda gördüğü 8 sayılık gözlem vektörü"),
+  ...figure("diagram_episode_flow.png", "Bir episode boyunca çağrılan metotlar"),
+  ...figure("diagram_observation_vector.png", "Ajanın her adımda gördüğü 8 sayılık gözlem vektörü"),
   P("Koddaki bazı tasarım kararları ve gerekçeleri:"),
   bullet([B("Hızları sıfırlamak: "), t("Sadece konumu sıfırlarsak, düşerken kazanılan hız yeni episode'a taşınır ve ajan daha başlarken kayar.")]),
   bullet([B("localPosition kullanmak: "), t("Gözlemler TrainingArea'nın koordinat sistemindedir. Alan dünyada başka bir yere kopyalansa da ajan aynı sayıları görür. World ve local karışırsa, kopyalanan alanlardaki ajanlar yanlış sayılar görür ve öğrenme bozulur.")]),
@@ -279,9 +283,11 @@ const roller = [
     ["Take Actions Between Decisions", "Açık", ""],
     ["Agent Max Step", "500", "500 adımda (10 s) hedefe varamazsa episode biter"],
   ], [3000, 2400, 3626], "Tablo 4. Behavior Parameters, C# ve YAML arasındaki sözleşme"),
+  ...figure("editor/01_training_scene_inspector.png", "Unity Editor: RollerBallTraining sahnesi. Solda Hierarchy (TrainingArea → Floor, Target, RollerAgent), sağda RollerAgent'ın Rigidbody ve Behavior Parameters ayarları (Space Size 8, Continuous Actions 2)"),
   H2("4.5 Heuristic: eğitimden önce ortam testi"),
   P("\"RL öğrendi mi?\" sorusundan önce \"ortam doğru mu?\" sorusu cevaplanmalıdır. Heuristic metodu, yeni Input System'in Keyboard.current API'siyle WASD ve ok tuşlarını iki aksiyona çevirir; eski Input.GetAxis kullanılmamıştır. Behavior Type = Heuristic Only yapılınca top klavyeyle sürülebilir."),
   P([B("Manuel test sonucu (Aktivite 4): "), t("Unity Editor'da Behavior Type = Heuristic Only yapılarak top WASD ile sürüldü. Üç senaryo da beklendiği gibi çalıştı: (1) top tuşlarla hareket ediyor; (2) hedefe değince episode bitiyor, top merkeze dönüyor ve hedef yeni bir yere taşınıyor; (3) zeminden düşünce episode bitiyor ve top merkeze dönüyor.")]),
+  ...figure("editor/02_heuristic_play.png", "Heuristic testi: Behavior Type = Heuristic Only, Play modunda top klavye ile sürülüyor"),
   P("Ortam mantığı ayrıca otomatik olarak da test edilmiştir. Hedefe doğru iten basit bir kural tabanlı kontrolcü 200 denemenin tamamında hedefe ulaşmıştır; bu, başarı kontrolünün ve episode sıfırlamanın çalıştığını gösterir. Rastgele hareket eden bir politika ise denemelerin çoğunda zeminden düşmüştür; bu da düşme kontrolünün ve sıfırlamanın çalıştığını gösterir."),
   H2("4.6 Eğitim"),
   P("Sunudaki PPO yapılandırması (config/rollerball_2026.yaml) hiç değiştirilmeden kullanıldı:"),
@@ -304,7 +310,8 @@ const roller = [
   num2("Behavior Parameters → Model alanına atanır, Behavior Type = Inference Only yapılır."),
   num2("Play'e basılır. Ajan artık Python olmadan, sadece Unity içindeki Inference Engine ile hareket eder."),
   P("Bu adımlar sonucunda iki sahne hazırlandı: RollerBallInference.unity (baseline modeli) ve RollerBallInference_Relative5.unity (Deney B modeli, ajan rastgele yerlerden başlar)."),
-  ...figure("trained_agent_filmstrip.png", "Şekil 6. Eğitilmiş ajan, 0.4 saniye aralıklarla. Her başarıdan sonra hedef yeni bir yere taşınıyor (3 s içinde 3 başarı)"),
+  ...figure("editor/03_inference_play.png", "Inference: Behavior Parameters → Model = RollerBall_U63 (eğitilmiş ONNX), Behavior Type = Inference Only; Play modunda ajan Python olmadan hareket ediyor"),
+  ...figure("trained_agent_filmstrip.png", "Eğitilmiş ajan, 0.4 saniye aralıklarla. Her başarıdan sonra hedef yeni bir yere taşınıyor (3 s içinde 3 başarı)"),
 ];
 
 const degerlendirme = [
@@ -318,7 +325,7 @@ const degerlendirme = [
   P("Değerlendirme için tools/evaluate.py yazıldı. Bu script mlagents_envs Python API'si ile build'i çalıştırır ve ONNX modeli onnxruntime ile, eğitimdeki gibi rastgele örnekleme yapmadan, deterministik olarak çalıştırır."),
   ...table(["Politika", "Başarı %", "Düşme %", "Süre doldu %", "Ort. adım", "Varış (s)"], evalRows(fixed),
     [2900, 1350, 1150, 1300, 1150, 1176], "Tablo 6. Aynı 200 başlangıç koşulunda sonuçlar (ajan merkezden başlıyor, eğitimdeki gibi). PPO satırları: 3 seed ortalaması ± standart sapma"),
-  ...figure("training_curves_all.png", "Şekil 7. Eğitim boyunca metrikler (çizgi: 3 seed ortalaması, gölge: en düşük–en yüksek seed)", 620),
+  ...figure("training_curves_all.png", "Eğitim boyunca metrikler (çizgi: 3 seed ortalaması, gölge: en düşük–en yüksek seed)", 620, "curves"),
   H2("5.1 Baseline sonuçlarının yorumu"),
   bullet([t("Eğitilmiş PPO, rastgele politikaya göre başarıyı %"), t(pct(fixed.random.success_rate.mean)), t("'ten %"), t(pct(fixed.ppo_Absolute8.success_rate.mean)), t("'e çıkardı. Hedefe varış süresi yaklaşık 0.8 saniyeye indi. Bu süre, elle yazılmış kural tabanlı kontrolcüyle aynı düzeydedir.")]),
   bullet([t("Seed'lere göre başarı: %"), t(seedVals("Absolute8", "Fixed").join(" / %")), t(". Seed 2'nin eğitimi 200.000 adımda %"), t(finalSucc("Absolute8")[1]), t(" başarıda kaldı. Diğer iki seed %90'a sırasıyla "), t(to90("Absolute8")[0]), t(" ve "), t(to90("Absolute8")[2]), t(" adımda ulaştı.")]),
@@ -343,10 +350,11 @@ const ablasyon = [
   P("Deney B'nin sorusu, yeni başlangıç konumlarında genellemenin iyileşip iyileşmediğidir. Bunu ölçmek için ajan, eğitimde hiç olmadığı gibi, zeminin rastgele bir noktasından başlatıldı. Diğer her şey aynı kaldı: aynı modeller, aynı 200 hedef konumu."),
   ...table(["Politika", "Başarı %", "Düşme %", "Süre doldu %", "Ort. adım", "Varış (s)"], evalRows(rnd),
     [2900, 1350, 1150, 1300, 1150, 1176], "Tablo 9. Ajan rastgele yerden başladığında sonuçlar (genelleme testi)"),
-  ...figure("eval_comparison.png", "Şekil 8. Başarı ve düşme oranları. Solda eğitimdeki koşul, sağda genelleme testi", 620),
-  ...figure("trained_agent_relative5_filmstrip.png", "Şekil 9. Deney B modeli: ajan her episode'a farklı bir yerden başlıyor ve yine hedefe gidiyor"),
+  ...figure("eval_comparison.png", "Başarı ve düşme oranları. Solda eğitimdeki koşul, sağda genelleme testi", 620),
+  ...figure("trained_agent_relative5_filmstrip.png", "Deney B modeli: ajan her episode'a farklı bir yerden başlıyor ve yine hedefe gidiyor"),
+  ...figure("editor/05_console_relative5_play.png", "Deney B sahnesi Unity Editor'da çalışırken: Space Size 5, Model = RollerBall_U63_Relative5. Console'da hata ve uyarı yok (yalnızca bilgi mesajları)"),
   H2("6.3 Yorum"),
-  P([B("Deney A (hız yok): "), t("Hipotez doğrulanmadı. Hız çıkarıldığında başarı düşmedi ve 3 seed de %100'e ulaştı. Ajan her 0.02 saniyede yeniden karar verdiği için, kendi hareketinin sonucunu bir sonraki gözlemde görüp düzeltebiliyor. Görev hedefte durmayı değil yalnızca dokunmayı istediğinden fren de gerekmiyor. Ancak politika entropisi tüm eğitim boyunca belirgin şekilde yüksek kaldı (Şekil 7). Yani ajan, aynı başarıya daha belirsiz kararlarla ulaşıyor. Hedefte durmayı gerektiren bir görevde hız bilgisinin önemi artacaktır.")]),
+  P([B("Deney A (hız yok): "), t("Hipotez doğrulanmadı. Hız çıkarıldığında başarı düşmedi ve 3 seed de %100'e ulaştı. Ajan her 0.02 saniyede yeniden karar verdiği için, kendi hareketinin sonucunu bir sonraki gözlemde görüp düzeltebiliyor. Görev hedefte durmayı değil yalnızca dokunmayı istediğinden fren de gerekmiyor. Ancak politika entropisi tüm eğitim boyunca belirgin şekilde yüksek kaldı (Şekil " + figIds.curves + "). Yani ajan, aynı başarıya daha belirsiz kararlarla ulaşıyor. Hedefte durmayı gerektiren bir görevde hız bilgisinin önemi artacaktır.")]),
   P([B("Deney B (göreli konum): "), t("Hipotez güçlü biçimde doğrulandı. Merkezden başlarken üç yapılandırma da benzer. Ancak ajan rastgele yerden başladığında baseline %"), t(pct(rnd.ppo_Absolute8.success_rate.mean)), t(", Deney B ise %"), B(pct(rnd.ppo_Relative5.success_rate.mean)), t(" başarı gösterdi (seed'ler: %"), t(seedVals("Relative5", "Random").join(" / %")), t("). Nedeni şudur: mutlak konumla eğitilen ajan hep merkezden başladığı için yalnızca \"merkezden hedefe giden\" durumları görmüştür; başka bir yerden başladığında ezberlediği durumların dışına çıkar. Göreli gözlemde \"hedef 2 m sağımda\" durumu zeminin neresinde olursa olsun aynı sayılarla ifade edilir. Öğrenilen davranış böylece her yere taşınabilir (öteleme değişmezliği).")]),
   P([B("Bedeli: "), t("Göreli gözlem ajanın zemin kenarını bilmesini engeller. Deney B'de kalan %"), t(pct(rnd.ppo_Relative5.fall_rate.mean)), t("'lük düşmenin bu eksiklikten kaynaklandığı düşünülmektedir; bu ayrıca test edilmemiştir. Çözüm önerisi olarak göreli konuma \"kenarlara uzaklık\" gibi bir bilgi eklenebilir.")]),
 ];
@@ -358,7 +366,7 @@ const tartisma = [
   H3("Neden konumları aynı koordinat sisteminde vermeliyiz? Local ve world karışırsa ne olur?"),
   P("Ajan iki konumu karşılaştırarak yön bulur. Biri world, diğeri local koordinattaysa aradaki fark anlamsızlaşır. TrainingArea orijindeyken sorun görünmez, ancak alan kopyalandığında (bizim 9 paralel alanımızda olduğu gibi) diğer alanlardaki ajanlar tutarsız sayılar görür ve öğrenme bozulur."),
   H3("Reward hacking: ajan platformdan düşerse ceza vermek şart mı?"),
-  P("Bu ortamda şart değil. Düşmek episode'u ödülsüz bitirdiği için zaten ödülden vazgeçmek demektir. Eğitimin ilk 10.000 adımında episode'ların %50–94'ü düşmeyle bitiyordu. Eğitim sonunda bu oran 9 eğitimin 8'inde %0–0.4'e indi; yalnızca baseline seed 2'de %24'te kaldı (Şekil 7). Düşmeye büyük bir ceza vermek, ajanın kenardan aşırı kaçmasına ve hedef kenardayken çekingen davranmasına yol açabilir. Küçük bir adım cezası ise hızlı gitmeyi teşvik eder; ajan kodunda bu seçenek (stepPenalty) eklendi ancak sunudaki temel tasarıma sadık kalmak için 0 bırakıldı."),
+  P("Bu ortamda şart değil. Düşmek episode'u ödülsüz bitirdiği için zaten ödülden vazgeçmek demektir. Eğitimin ilk 10.000 adımında episode'ların %50–94'ü düşmeyle bitiyordu. Eğitim sonunda bu oran 9 eğitimin 8'inde %0–0.4'e indi; yalnızca baseline seed 2'de %24'te kaldı (Şekil " + figIds.curves + "). Düşmeye büyük bir ceza vermek, ajanın kenardan aşırı kaçmasına ve hedef kenardayken çekingen davranmasına yol açabilir. Küçük bir adım cezası ise hızlı gitmeyi teşvik eder; ajan kodunda bu seçenek (stepPenalty) eklendi ancak sunudaki temel tasarıma sadık kalmak için 0 bırakıldı."),
   H3("MaxStep neden gerekir?"),
   P("MaxStep olmasaydı, hiçbir şey yapmayan ya da hedefin etrafında dönen bir ajan sonsuza kadar aynı episode'da kalabilirdi. Eğitim yeni hedef konumları görmez ve öğrenme takılırdı. Eğitimin ilk 10.000 adımında episode'ların %0–6'sı (rastgele politikada %9.5'i) zaman aşımıyla bitiyordu; eğitim sonunda bu oran tüm eğitimlerde %0'a indi."),
   H3("Bu gözlem vektörü öteleme ve dönme genellemesi açısından ideal mi?"),
@@ -392,7 +400,7 @@ const github = [
   ...code([
     "Assets/MLAgentsCourse/",
     "  Scripts/   RollerBallAgent.cs, TrainingAreaReplicator.cs, FrameRecorder.cs, CourseArgs.cs",
-    "  Editor/    RollerBallSceneBuilder.cs   (menü: ML Agents Course)",
+    "  Editor/    RollerBallSceneBuilder.cs, ReportScreenshots.cs   (menü: ML Agents Course)",
     "  Scenes/    RollerBallTraining, RollerBallInference, RollerBallInference_Relative5",
     "  Models/    RollerBall_U63.onnx, RollerBall_U63_Relative5.onnx",
     "config/      rollerball_2026.yaml, basic_short.yaml",
@@ -419,7 +427,7 @@ const kaynaklar = [
 const doc = new Document({
   features: { updateFields: true },
   creator: "Veysel Uğurlu",
-  title: "BLM5026 Hafta 5 Raporu: Unity ML-Agents",
+  title: "BLM5026 Rapor 4 (Hafta 5): Unity ML-Agents",
   styles: {
     default: { document: { run: { font: "Calibri", size: 22, color: INK } } },
     paragraphStyles: [
@@ -440,10 +448,10 @@ const doc = new Document({
   sections: [{
     properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1300, bottom: 1300, left: 1440, right: 1440 } } },
     footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER,
-      children: [t("BLM5026 · Hafta 5 · Unity ML-Agents · ", { size: 17, color: "888888" }), new TextRun({ children: [PageNumber.CURRENT], size: 17, color: "888888" })] })] }) },
+      children: [t("BLM5026 · Rapor 4 (Hafta 5) · Unity ML-Agents · ", { size: 17, color: "888888" }), new TextRun({ children: [PageNumber.CURRENT], size: 17, color: "888888" })] })] }) },
     children: [...cover, ...toc, ...ozet, ...giris, ...kurulum, ...basic, ...roller, ...degerlendirme, ...ablasyon, ...tartisma, ...sorunlar, ...sonuc, ...github, ...kaynaklar],
   }],
 });
 
-const out = path.join(DOCS, "Hafta05_ML-Agents_Rapor.docx");
+const out = path.join(DOCS, "Rapor4_Hafta5_ML-Agents.docx");
 Packer.toBuffer(doc).then((buf) => { fs.writeFileSync(out, buf); console.log("written", out, Math.round(buf.length / 1024), "KB"); });
