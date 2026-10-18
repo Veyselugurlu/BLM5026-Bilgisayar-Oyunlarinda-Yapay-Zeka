@@ -46,3 +46,10 @@ __pycache__/
 # ---- Course material from the instructor (not redistributed) ----
 /Dosyalar/
 /.md
+
+# ML-Agents runtime profiling dumps written in Play mode
+/Assets/ML-Agents/
+/Assets/ML-Agents.meta
+# empty folder created by the editor
+/Assets/Resources/
+/Assets/Resources.meta

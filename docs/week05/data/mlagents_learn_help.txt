@@ -1,0 +1,25 @@
+usage: mlagents-learn.exe [-h] [--env ENV_PATH] [--resume] [--deterministic]
+                          [--force] [--run-id RUN_ID]
+                          [--initialize-from RUN_ID] [--seed SEED]
+                          [--inference] [--base-port BASE_PORT]
+                          [--num-envs NUM_ENVS] [--num-areas NUM_AREAS]
+                          [--debug] [--env-args ...]
+                          [--max-lifetime-restarts MAX_LIFETIME_RESTARTS]
+                          [--restarts-rate-limit-n RESTARTS_RATE_LIMIT_N]
+                          [--restarts-rate-limit-period-s RESTARTS_RATE_LIMIT_PERIOD_S]
+                          [--torch] [--tensorflow] [--results-dir RESULTS_DIR]
+                          [--timeout-wait TIMEOUT_WAIT] [--width WIDTH]
+                          [--height HEIGHT] [--quality-level QUALITY_LEVEL]
+                          [--time-scale TIME_SCALE]
+                          [--target-frame-rate TARGET_FRAME_RATE]
+                          [--capture-frame-rate CAPTURE_FRAME_RATE]
+                          [--no-graphics] [--no-graphics-monitor]
+                          [--torch-device DEVICE]
+                          [trainer_config_path]
+
+positional arguments:
+  trainer_config_path
+
+options:
+  -h, --help            show this help message and exit
+  --env ENV_PATH        Path to the Unity executable to train (default: None)

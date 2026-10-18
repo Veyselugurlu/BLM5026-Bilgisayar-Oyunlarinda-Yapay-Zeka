@@ -1,0 +1,251 @@
+{
+  "Absolute8": {
+    "RB_Absolute8_s1": {
+      "Environment/Cumulative Reward": {
+        "final": 0.9962121248245239,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 0.9962121248245239,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 160000,
+      "Environment/Episode Length": {
+        "final": 36.92803192138672,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0037878789007663727,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4216347932815552,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.001149489777162671,
+        "final_step": 200000
+      }
+    },
+    "RB_Absolute8_s2": {
+      "Environment/Cumulative Reward": {
+        "final": 0.7686567306518555,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 0.7629629373550415,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": null,
+      "Environment/Episode Length": {
+        "final": 69.29629516601562,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.2370370328426361,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4289367198944092,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.0024717000778764486,
+        "final_step": 200000
+      }
+    },
+    "RB_Absolute8_s3": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 70000,
+      "Environment/Episode Length": {
+        "final": 33.702423095703125,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.3988571166992188,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.00014510239998344332,
+        "final_step": 200000
+      }
+    }
+  },
+  "NoVelocity6": {
+    "RB_NoVelocity6_s1": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 80000,
+      "Environment/Episode Length": {
+        "final": 33.496551513671875,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4094231128692627,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.00021951655799057335,
+        "final_step": 200000
+      }
+    },
+    "RB_NoVelocity6_s2": {
+      "Environment/Cumulative Reward": {
+        "final": 0.9960629940032959,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 0.9960784316062927,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 120000,
+      "Environment/Episode Length": {
+        "final": 38.39215850830078,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.003921568859368563,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4689093828201294,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.0008301637717522681,
+        "final_step": 200000
+      }
+    },
+    "RB_NoVelocity6_s3": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 110000,
+      "Environment/Episode Length": {
+        "final": 35.593406677246094,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4515804052352905,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.0003857700794469565,
+        "final_step": 200000
+      }
+    }
+  },
+  "Relative5": {
+    "RB_Relative5_s1": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 100000,
+      "Environment/Episode Length": {
+        "final": 33.26369857788086,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.393568515777588,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.00018149656534660608,
+        "final_step": 200000
+      }
+    },
+    "RB_Relative5_s2": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 110000,
+      "Environment/Episode Length": {
+        "final": 34.38298034667969,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.4025006294250488,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 0.0003051391104236245,
+        "final_step": 200000
+      }
+    },
+    "RB_Relative5_s3": {
+      "Environment/Cumulative Reward": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "RollerBall/Success Rate": {
+        "final": 1.0,
+        "final_step": 200000
+      },
+      "steps_to_90pct_success": 50000,
+      "Environment/Episode Length": {
+        "final": 32.27333450317383,
+        "final_step": 200000
+      },
+      "RollerBall/Fall Rate": {
+        "final": 0.0,
+        "final_step": 200000
+      },
+      "Policy/Entropy": {
+        "final": 1.3766610622406006,
+        "final_step": 200000
+      },
+      "Losses/Value Loss": {
+        "final": 8.63576860865578e-05,
+        "final_step": 200000
+      }
+    }
+  }
+}
