@@ -1,0 +1,36 @@
+[INFO] Connected to Unity environment with package version 4.1.0 and communication version 1.5.0
+[INFO] Connected new brain: Basic?team=0
+[INFO] Hyperparameters for behavior name Basic: 
+[INFO] Basic. Step: 2000. Time Elapsed: 26.268 s. Mean Reward: 0.129. Std of Reward: 0.414. Training.
+[INFO] Basic. Step: 4000. Time Elapsed: 43.794 s. Mean Reward: 0.254. Std of Reward: 0.387. Training.
+[INFO] Basic. Step: 6000. Time Elapsed: 60.702 s. Mean Reward: 0.516. Std of Reward: 0.400. Training.
+[INFO] Basic. Step: 8000. Time Elapsed: 83.505 s. Mean Reward: 0.794. Std of Reward: 0.242. Training.
+[INFO] Basic. Step: 10000. Time Elapsed: 101.429 s. Mean Reward: 0.895. Std of Reward: 0.121. Training.
+[INFO] Basic. Step: 12000. Time Elapsed: 117.674 s. Mean Reward: 0.925. Std of Reward: 0.009. Training.
+[INFO] Basic. Step: 14000. Time Elapsed: 135.676 s. Mean Reward: 0.928. Std of Reward: 0.006. Training.
+[INFO] Basic. Step: 16000. Time Elapsed: 153.434 s. Mean Reward: 0.928. Std of Reward: 0.005. Training.
+[INFO] Basic. Step: 18000. Time Elapsed: 170.605 s. Mean Reward: 0.930. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 20000. Time Elapsed: 186.825 s. Mean Reward: 0.929. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 22000. Time Elapsed: 204.318 s. Mean Reward: 0.929. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 24000. Time Elapsed: 222.559 s. Mean Reward: 0.930. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 26000. Time Elapsed: 240.650 s. Mean Reward: 0.929. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 28000. Time Elapsed: 257.769 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Basic. Step: 30000. Time Elapsed: 274.683 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Basic. Step: 32000. Time Elapsed: 292.064 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Basic. Step: 34000. Time Elapsed: 309.965 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Basic. Step: 36000. Time Elapsed: 328.708 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Basic. Step: 38000. Time Elapsed: 347.482 s. Mean Reward: 0.930. Std of Reward: 0.003. Training.
+[INFO] Basic. Step: 40000. Time Elapsed: 364.498 s. Mean Reward: 0.930. Std of Reward: 0.002. Training.
+[INFO] Exported results\Basic_U63_01\Basic\Basic-40002.onnx
+[INFO] Copied results\Basic_U63_01\Basic\Basic-40002.onnx to results\Basic_U63_01\Basic.onnx.
+
+## results/Basic_U63_01 (find)
+  results/Basic_U63_01/Basic/Basic-40002.onnx
+  results/Basic_U63_01/Basic/Basic-40002.pt
+  results/Basic_U63_01/Basic/checkpoint.pt
+  results/Basic_U63_01/Basic/events.out.tfevents.1792342792.LAPTOP-EL590ITE.3484.0
+  results/Basic_U63_01/Basic.onnx
+  results/Basic_U63_01/configuration.yaml
+  results/Basic_U63_01/run_logs/Player-0.log
+  results/Basic_U63_01/run_logs/timers.json
+  results/Basic_U63_01/run_logs/training_status.json
