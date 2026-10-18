@@ -411,7 +411,7 @@ const github = [
   ]),
   P("Projeyi çalıştırmak için: Unity Hub → Add project from disk → depo klasörü (Unity 6000.3.x). Ardından Assets/MLAgentsCourse/Scenes/RollerBallInference.unity sahnesi açılıp Play'e basılır."),
   H2("Yapay zekâ kullanım beyanı"),
-  P("Ders politikasına uygun olarak belirtilir: Kurulum adımları, kod iskeleti, deney ve grafik scriptleri ile bu raporun taslağı için bir LLM asistanından (Anthropic Claude) yardım alınmıştır. Ödül, gözlem ve aksiyon tasarımı sunudaki referans çözüme dayanır. Tüm kod okunmuş, çalıştırılmış ve test edilmiştir. Raporda yer alan tüm sayılar gerçek eğitim ve değerlendirme çıktılarından (docs/week05/data) otomatik olarak alınmıştır."),
+  P("Ders politikası gereği belirtilir: Kurulum, kodlama, deney scriptleri ve raporun hazırlanmasında yapay zekâ asistanından (Anthropic Claude) yararlanılmıştır. Ortam tasarımı sunudaki referans çözüme dayanır. Proje Unity'de çalıştırılmış, klavye (Heuristic) testi elle yapılmış ve sonuçlar kontrol edilmiştir. Rapordaki tüm sayılar gerçek eğitim ve değerlendirme çıktılarından alınmıştır."),
 ];
 
 const kaynaklar = [
