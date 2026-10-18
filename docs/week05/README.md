@@ -1,8 +1,8 @@
-# Hafta 5: Unity ML-Agents ile Pekiştirmeli Öğrenme
+# Rapor 4 (Hafta 5): Unity ML-Agents ile Pekiştirmeli Öğrenme
 
 **BLM5026 Bilgisayar Oyunlarında Yapay Zeka** · Veysel Uğurlu · Unity 6.3 LTS · ML-Agents 4.1.0 · PPO
 
-> Word raporu: [Hafta05_ML-Agents_Rapor.docx](Hafta05_ML-Agents_Rapor.docx)
+> Word raporu: [Rapor4_Hafta5_ML-Agents.docx](Rapor4_Hafta5_ML-Agents.docx)
 
 ![Eğitilmiş ajan](images/trained_agent.gif) ![Deney B: rastgele başlangıç](images/trained_agent_relative5.gif)
 
@@ -111,6 +111,19 @@ mlagents-learn config/rollerball_2026.yaml --run-id=RB_Absolute8_s1 --env=Builds
 Eğitim sonunda üretilen ONNX dosyası `Assets/MLAgentsCourse/Models/` klasörüne kopyalandı. Sonra Behavior Parameters → **Model** alanına atandı ve **Behavior Type = Inference Only** yapıldı. Sonuç: [RollerBallInference.unity](../../Assets/MLAgentsCourse/Scenes/RollerBallInference.unity). Bu sahnede Play'e basınca ajan Python olmadan hedefe gidiyor.
 
 ![Eğitilmiş ajan, kare kare](images/trained_agent_filmstrip.png)
+
+### 4.5 Unity Editor'dan görüntüler
+
+| | |
+|---|---|
+| ![Eğitim sahnesi ve Inspector](images/editor/01_training_scene_inspector.png) | ![Heuristic testi](images/editor/02_heuristic_play.png) |
+| *RollerBallTraining: Hierarchy ve Behavior Parameters (Space Size 8, Continuous Actions 2)* | *Heuristic Only: top Play modunda klavye ile sürülüyor* |
+| ![Inference](images/editor/03_inference_play.png) | ![Package Manager](images/editor/04_package_manager.png) |
+| *Inference Only: Model = RollerBall_U63 (eğitilmiş ONNX)* | *Package Manager: ML Agents 4.1.0* |
+| ![Deney B ve Console](images/editor/05_console_relative5_play.png) | |
+| *Deney B sahnesi çalışırken Console: hata ve uyarı yok* | |
+
+Bu görüntüler [ReportScreenshots.cs](../../Assets/MLAgentsCourse/Editor/ReportScreenshots.cs) ile Unity Editor'ın kendisinden alındı (menü: **ML Agents Course → 5. Capture Report Screenshots**).
 
 ## 5. Öğrenmeyi nasıl değerlendirdik?
 
