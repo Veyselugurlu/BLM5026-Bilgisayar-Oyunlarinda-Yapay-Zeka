@@ -11,6 +11,8 @@ const {
 const ROOT = path.resolve(__dirname, "..", "..");
 const DOCS = path.join(ROOT, "docs", "week05");
 const IMG = path.join(DOCS, "images");
+// The student number is passed at build time (STUDENT_NO=...) so it never ends up in the public repository.
+const STUDENT_NO = process.env.STUDENT_NO || "……………………";
 const REPO_URL = "https://github.com/Veyselugurlu/BLM5026-Bilgisayar-Oyunlarinda-Yapay-Zeka";
 const BRANCH_URL = REPO_URL + "/tree/feature/week05-ml-agents";
 
@@ -124,7 +126,7 @@ const cover = [
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 600 }, children: [t("Kurulum, Basic Örneği ve Kendi RollerAgent Ortamımız", { bold: true, size: 32 })] }),
   ...figure("scene_perspective.png", "RollerAgent ortamı: yeşil top (ajan) turuncu küpe (hedef) ulaşmayı öğreniyor", 430, null, false),
   new Paragraph({ spacing: { before: 400 }, alignment: AlignmentType.CENTER, children: [B("Öğrenci: "), t("Veysel Uğurlu")] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Öğrenci No: "), t("……………………")] }),
+  new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Öğrenci No: "), t(STUDENT_NO)] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Dersi Veren: "), t("Doç. Dr. İzzet Fatih Şentürk")] }),
   new Paragraph({ alignment: AlignmentType.CENTER, children: [B("Tarih: "), t("Ekim 2026")] }),
   new Paragraph({ spacing: { before: 300 }, alignment: AlignmentType.CENTER, children: [B("GitHub deposu: "), link(REPO_URL, REPO_URL)] }),
@@ -452,5 +454,5 @@ const doc = new Document({
   }],
 });
 
-const out = path.join(DOCS, "Rapor4_Hafta5_ML-Agents.docx");
+const out = process.env.REPORT_OUT || path.join(DOCS, "Rapor4_Hafta5_ML-Agents.docx");
 Packer.toBuffer(doc).then((buf) => { fs.writeFileSync(out, buf); console.log("written", out, Math.round(buf.length / 1024), "KB"); });

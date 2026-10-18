@@ -26,7 +26,7 @@ Yeşil top (ajan) turuncu küpe (hedef) ulaşmayı deneme yanılma ile öğreniy
 | Sunu 2: RollerAgent | Ortam sıfırdan kuruldu. Eğitilmiş PPO aynı 200 başlangıç koşulunda **%93.2 ± 11.4** başarı aldı (3 seed); rastgele politika %21.5 |
 | Challenge: ablasyon | Göreli gözlem (Deney B), yeni başlangıç konumlarında başarıyı **%48 → %96.5** çıkardı |
 
-Ayrıntılı rapor: **[docs/week05/README.md](docs/week05/README.md)** · Word raporu: [docs/week05/Rapor4_Hafta5_ML-Agents.docx](docs/week05/Rapor4_Hafta5_ML-Agents.docx)
+Ayrıntılı rapor: **[docs/week05/README.md](docs/week05/README.md)**
 
 ### Projeyi açma
 
