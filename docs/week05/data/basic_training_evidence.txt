@@ -28,7 +28,7 @@
   results/Basic_U63_01/Basic/Basic-40002.onnx
   results/Basic_U63_01/Basic/Basic-40002.pt
   results/Basic_U63_01/Basic/checkpoint.pt
-  results/Basic_U63_01/Basic/events.out.tfevents.1792342792.LAPTOP-EL590ITE.3484.0
+  results/Basic_U63_01/Basic/events.out.tfevents.1792342792.<bilgisayar-adi>.3484.0
   results/Basic_U63_01/Basic.onnx
   results/Basic_U63_01/configuration.yaml
   results/Basic_U63_01/run_logs/Player-0.log
