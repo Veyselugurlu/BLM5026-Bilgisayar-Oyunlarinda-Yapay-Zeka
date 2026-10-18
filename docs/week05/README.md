@@ -2,8 +2,6 @@
 
 **BLM5026 Bilgisayar Oyunlarında Yapay Zeka** · Veysel Uğurlu · Unity 6.3 LTS · ML-Agents 4.1.0 · PPO
 
-> Word raporu: [Rapor4_Hafta5_ML-Agents.docx](Rapor4_Hafta5_ML-Agents.docx)
-
 ![Eğitilmiş ajan](images/trained_agent.gif) ![Deney B: rastgele başlangıç](images/trained_agent_relative5.gif)
 
 *Sol: eğitilmiş ajan (baseline, 8 gözlem). Sağ: Deney B modeli; ajan her seferinde rastgele bir yerden başlıyor.*

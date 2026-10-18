@@ -56,3 +56,7 @@ __pycache__/
 
 # Word lock files
 ~$*
+
+# Weekly Word reports are submitted through the school system, not GitHub
+# (they contain the student number).
+/docs/**/*.docx
