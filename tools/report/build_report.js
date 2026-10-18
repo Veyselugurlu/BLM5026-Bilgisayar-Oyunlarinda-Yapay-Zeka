@@ -11,7 +11,7 @@ const {
 const ROOT = path.resolve(__dirname, "..", "..");
 const DOCS = path.join(ROOT, "docs", "week05");
 const IMG = path.join(DOCS, "images");
-const REPO_URL = "https://github.com/Veyselugurlu/BLM5026-Oyunlarda-Yapay-Zeka";
+const REPO_URL = "https://github.com/Veyselugurlu/BLM5026-Bilgisayar-Oyunlarinda-Yapay-Zeka";
 const BRANCH_URL = REPO_URL + "/tree/feature/week05-ml-agents";
 
 const summary = JSON.parse(fs.readFileSync(path.join(DOCS, "data", "results_summary.json"), "utf8"));
@@ -281,6 +281,7 @@ const roller = [
   ], [3000, 2400, 3626], "Tablo 4. Behavior Parameters, C# ve YAML arasındaki sözleşme"),
   H2("4.5 Heuristic: eğitimden önce ortam testi"),
   P("\"RL öğrendi mi?\" sorusundan önce \"ortam doğru mu?\" sorusu cevaplanmalıdır. Heuristic metodu, yeni Input System'in Keyboard.current API'siyle WASD ve ok tuşlarını iki aksiyona çevirir; eski Input.GetAxis kullanılmamıştır. Behavior Type = Heuristic Only yapılınca top klavyeyle sürülebilir."),
+  P([B("Manuel test sonucu (Aktivite 4): "), t("Unity Editor'da Behavior Type = Heuristic Only yapılarak top WASD ile sürüldü. Üç senaryo da beklendiği gibi çalıştı: (1) top tuşlarla hareket ediyor; (2) hedefe değince episode bitiyor, top merkeze dönüyor ve hedef yeni bir yere taşınıyor; (3) zeminden düşünce episode bitiyor ve top merkeze dönüyor.")]),
   P("Ortam mantığı ayrıca otomatik olarak da test edilmiştir. Hedefe doğru iten basit bir kural tabanlı kontrolcü 200 denemenin tamamında hedefe ulaşmıştır; bu, başarı kontrolünün ve episode sıfırlamanın çalıştığını gösterir. Rastgele hareket eden bir politika ise denemelerin çoğunda zeminden düşmüştür; bu da düşme kontrolünün ve sıfırlamanın çalıştığını gösterir."),
   H2("4.6 Eğitim"),
   P("Sunudaki PPO yapılandırması (config/rollerball_2026.yaml) hiç değiştirilmeden kullanıldı:"),
