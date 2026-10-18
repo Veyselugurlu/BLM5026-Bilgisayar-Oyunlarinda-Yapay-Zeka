@@ -60,3 +60,4 @@ __pycache__/
 # Weekly Word reports are submitted through the school system, not GitHub
 # (they contain the student number).
 /docs/**/*.docx
+/docs/**/*.pdf
