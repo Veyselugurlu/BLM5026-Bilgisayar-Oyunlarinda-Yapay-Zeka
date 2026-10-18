@@ -1,0 +1,816 @@
+{
+  "policy": "onnx",
+  "model": "results/RB_NoVelocity6_s2/RollerBall_U63.onnx",
+  "obs_mode": "NoVelocity6",
+  "spawn_mode": "Random",
+  "seed": 12345,
+  "episodes": 200,
+  "success_rate": 0.445,
+  "fall_rate": 0.555,
+  "timeout_rate": 0.0,
+  "mean_episode_length": 87.98,
+  "mean_steps_to_target": 55.168539325842694,
+  "mean_time_to_target_s": 1.1033707865168538,
+  "per_episode": [
+    {
+      "outcome": "success",
+      "length": 78
+    },
+    {
+      "outcome": "success",
+      "length": 35
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "success",
+      "length": 54
+    },
+    {
+      "outcome": "fall",
+      "length": 67
+    },
+    {
+      "outcome": "success",
+      "length": 49
+    },
+    {
+      "outcome": "fall",
+      "length": 152
+    },
+    {
+      "outcome": "fall",
+      "length": 96
+    },
+    {
+      "outcome": "fall",
+      "length": 96
+    },
+    {
+      "outcome": "fall",
+      "length": 330
+    },
+    {
+      "outcome": "success",
+      "length": 43
+    },
+    {
+      "outcome": "success",
+      "length": 67
+    },
+    {
+      "outcome": "success",
+      "length": 85
+    },
+    {
+      "outcome": "fall",
+      "length": 90
+    },
+    {
+      "outcome": "success",
+      "length": 67
+    },
+    {
+      "outcome": "fall",
+      "length": 120
+    },
+    {
+      "outcome": "fall",
+      "length": 135
+    },
+    {
+      "outcome": "fall",
+      "length": 95
+    },
+    {
+      "outcome": "fall",
+      "length": 111
+    },
+    {
+      "outcome": "success",
+      "length": 46
+    },
+    {
+      "outcome": "fall",
+      "length": 94
+    },
+    {
+      "outcome": "fall",
+      "length": 85
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "success",
+      "length": 71
+    },
+    {
+      "outcome": "fall",
+      "length": 165
+    },
+    {
+      "outcome": "fall",
+      "length": 90
+    },
+    {
+      "outcome": "fall",
+      "length": 79
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "fall",
+      "length": 167
+    },
+    {
+      "outcome": "fall",
+      "length": 96
+    },
+    {
+      "outcome": "success",
+      "length": 47
+    },
+    {
+      "outcome": "fall",
+      "length": 93
+    },
+    {
+      "outcome": "fall",
+      "length": 90
+    },
+    {
+      "outcome": "fall",
+      "length": 109
+    },
+    {
+      "outcome": "success",
+      "length": 58
+    },
+    {
+      "outcome": "fall",
+      "length": 83
+    },
+    {
+      "outcome": "fall",
+      "length": 69
+    },
+    {
+      "outcome": "fall",
+      "length": 346
+    },
+    {
+      "outcome": "fall",
+      "length": 84
+    },
+    {
+      "outcome": "success",
+      "length": 34
+    },
+    {
+      "outcome": "success",
+      "length": 67
+    },
+    {
+      "outcome": "success",
+      "length": 55
+    },
+    {
+      "outcome": "success",
+      "length": 56
+    },
+    {
+      "outcome": "success",
+      "length": 33
+    },
+    {
+      "outcome": "success",
+      "length": 70
+    },
+    {
+      "outcome": "fall",
+      "length": 91
+    },
+    {
+      "outcome": "fall",
+      "length": 92
+    },
+    {
+      "outcome": "success",
+      "length": 46
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "fall",
+      "length": 110
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "fall",
+      "length": 152
+    },
+    {
+      "outcome": "fall",
+      "length": 102
+    },
+    {
+      "outcome": "success",
+      "length": 64
+    },
+    {
+      "outcome": "fall",
+      "length": 109
+    },
+    {
+      "outcome": "fall",
+      "length": 100
+    },
+    {
+      "outcome": "success",
+      "length": 40
+    },
+    {
+      "outcome": "success",
+      "length": 63
+    },
+    {
+      "outcome": "success",
+      "length": 36
+    },
+    {
+      "outcome": "fall",
+      "length": 141
+    },
+    {
+      "outcome": "success",
+      "length": 87
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "fall",
+      "length": 115
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "fall",
+      "length": 112
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "fall",
+      "length": 247
+    },
+    {
+      "outcome": "success",
+      "length": 309
+    },
+    {
+      "outcome": "success",
+      "length": 40
+    },
+    {
+      "outcome": "fall",
+      "length": 71
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "fall",
+      "length": 90
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "fall",
+      "length": 123
+    },
+    {
+      "outcome": "fall",
+      "length": 115
+    },
+    {
+      "outcome": "fall",
+      "length": 122
+    },
+    {
+      "outcome": "fall",
+      "length": 123
+    },
+    {
+      "outcome": "success",
+      "length": 64
+    },
+    {
+      "outcome": "fall",
+      "length": 109
+    },
+    {
+      "outcome": "fall",
+      "length": 106
+    },
+    {
+      "outcome": "fall",
+      "length": 108
+    },
+    {
+      "outcome": "success",
+      "length": 51
+    },
+    {
+      "outcome": "fall",
+      "length": 109
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "fall",
+      "length": 76
+    },
+    {
+      "outcome": "fall",
+      "length": 106
+    },
+    {
+      "outcome": "success",
+      "length": 70
+    },
+    {
+      "outcome": "success",
+      "length": 55
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "fall",
+      "length": 80
+    },
+    {
+      "outcome": "fall",
+      "length": 136
+    },
+    {
+      "outcome": "fall",
+      "length": 123
+    },
+    {
+      "outcome": "fall",
+      "length": 108
+    },
+    {
+      "outcome": "success",
+      "length": 38
+    },
+    {
+      "outcome": "success",
+      "length": 36
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "fall",
+      "length": 85
+    },
+    {
+      "outcome": "fall",
+      "length": 115
+    },
+    {
+      "outcome": "fall",
+      "length": 117
+    },
+    {
+      "outcome": "success",
+      "length": 42
+    },
+    {
+      "outcome": "success",
+      "length": 46
+    },
+    {
+      "outcome": "success",
+      "length": 53
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "success",
+      "length": 33
+    },
+    {
+      "outcome": "success",
+      "length": 39
+    },
+    {
+      "outcome": "success",
+      "length": 67
+    },
+    {
+      "outcome": "fall",
+      "length": 109
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "success",
+      "length": 44
+    },
+    {
+      "outcome": "fall",
+      "length": 98
+    },
+    {
+      "outcome": "success",
+      "length": 33
+    },
+    {
+      "outcome": "success",
+      "length": 44
+    },
+    {
+      "outcome": "fall",
+      "length": 72
+    },
+    {
+      "outcome": "success",
+      "length": 39
+    },
+    {
+      "outcome": "success",
+      "length": 50
+    },
+    {
+      "outcome": "fall",
+      "length": 98
+    },
+    {
+      "outcome": "success",
+      "length": 46
+    },
+    {
+      "outcome": "success",
+      "length": 44
+    },
+    {
+      "outcome": "fall",
+      "length": 89
+    },
+    {
+      "outcome": "success",
+      "length": 59
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "fall",
+      "length": 114
+    },
+    {
+      "outcome": "fall",
+      "length": 113
+    },
+    {
+      "outcome": "success",
+      "length": 61
+    },
+    {
+      "outcome": "fall",
+      "length": 104
+    },
+    {
+      "outcome": "success",
+      "length": 40
+    },
+    {
+      "outcome": "fall",
+      "length": 87
+    },
+    {
+      "outcome": "success",
+      "length": 58
+    },
+    {
+      "outcome": "fall",
+      "length": 137
+    },
+    {
+      "outcome": "fall",
+      "length": 363
+    },
+    {
+      "outcome": "fall",
+      "length": 72
+    },
+    {
+      "outcome": "success",
+      "length": 31
+    },
+    {
+      "outcome": "fall",
+      "length": 150
+    },
+    {
+      "outcome": "fall",
+      "length": 99
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "success",
+      "length": 62
+    },
+    {
+      "outcome": "success",
+      "length": 207
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "success",
+      "length": 48
+    },
+    {
+      "outcome": "success",
+      "length": 53
+    },
+    {
+      "outcome": "fall",
+      "length": 97
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "fall",
+      "length": 79
+    },
+    {
+      "outcome": "fall",
+      "length": 131
+    },
+    {
+      "outcome": "success",
+      "length": 51
+    },
+    {
+      "outcome": "success",
+      "length": 49
+    },
+    {
+      "outcome": "fall",
+      "length": 106
+    },
+    {
+      "outcome": "fall",
+      "length": 130
+    },
+    {
+      "outcome": "success",
+      "length": 31
+    },
+    {
+      "outcome": "fall",
+      "length": 107
+    },
+    {
+      "outcome": "success",
+      "length": 66
+    },
+    {
+      "outcome": "fall",
+      "length": 87
+    },
+    {
+      "outcome": "success",
+      "length": 61
+    },
+    {
+      "outcome": "success",
+      "length": 27
+    },
+    {
+      "outcome": "fall",
+      "length": 96
+    },
+    {
+      "outcome": "fall",
+      "length": 126
+    },
+    {
+      "outcome": "success",
+      "length": 45
+    },
+    {
+      "outcome": "fall",
+      "length": 104
+    },
+    {
+      "outcome": "fall",
+      "length": 102
+    },
+    {
+      "outcome": "success",
+      "length": 41
+    },
+    {
+      "outcome": "fall",
+      "length": 113
+    },
+    {
+      "outcome": "fall",
+      "length": 102
+    },
+    {
+      "outcome": "success",
+      "length": 52
+    },
+    {
+      "outcome": "success",
+      "length": 44
+    },
+    {
+      "outcome": "fall",
+      "length": 104
+    },
+    {
+      "outcome": "success",
+      "length": 65
+    },
+    {
+      "outcome": "success",
+      "length": 58
+    },
+    {
+      "outcome": "fall",
+      "length": 104
+    },
+    {
+      "outcome": "fall",
+      "length": 88
+    },
+    {
+      "outcome": "success",
+      "length": 59
+    },
+    {
+      "outcome": "fall",
+      "length": 100
+    },
+    {
+      "outcome": "fall",
+      "length": 74
+    },
+    {
+      "outcome": "fall",
+      "length": 120
+    },
+    {
+      "outcome": "fall",
+      "length": 104
+    },
+    {
+      "outcome": "fall",
+      "length": 107
+    },
+    {
+      "outcome": "fall",
+      "length": 103
+    },
+    {
+      "outcome": "fall",
+      "length": 119
+    },
+    {
+      "outcome": "success",
+      "length": 67
+    },
+    {
+      "outcome": "success",
+      "length": 37
+    },
+    {
+      "outcome": "fall",
+      "length": 90
+    },
+    {
+      "outcome": "fall",
+      "length": 96
+    },
+    {
+      "outcome": "fall",
+      "length": 114
+    },
+    {
+      "outcome": "success",
+      "length": 51
+    },
+    {
+      "outcome": "success",
+      "length": 69
+    },
+    {
+      "outcome": "fall",
+      "length": 108
+    },
+    {
+      "outcome": "fall",
+      "length": 170
+    },
+    {
+      "outcome": "fall",
+      "length": 120
+    },
+    {
+      "outcome": "fall",
+      "length": 88
+    },
+    {
+      "outcome": "fall",
+      "length": 123
+    },
+    {
+      "outcome": "success",
+      "length": 25
+    },
+    {
+      "outcome": "fall",
+      "length": 118
+    },
+    {
+      "outcome": "fall",
+      "length": 107
+    },
+    {
+      "outcome": "success",
+      "length": 45
+    },
+    {
+      "outcome": "fall",
+      "length": 89
+    },
+    {
+      "outcome": "success",
+      "length": 49
+    },
+    {
+      "outcome": "fall",
+      "length": 189
+    },
+    {
+      "outcome": "fall",
+      "length": 99
+    },
+    {
+      "outcome": "fall",
+      "length": 114
+    }
+  ]
+}

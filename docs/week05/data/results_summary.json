@@ -1,0 +1,456 @@
+{
+  "Fixed": {
+    "ppo_Absolute8": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.9316666666666666,
+        "std": 0.11405408073950413,
+        "values": [
+          0.995,
+          0.8,
+          1.0
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.06833333333333334,
+        "std": 0.11405408073950417,
+        "values": [
+          0.005,
+          0.2,
+          0.0
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 45.70666666666666,
+        "std": 17.212985166243925,
+        "values": [
+          37.22,
+          65.515,
+          34.385
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.7668321608040201,
+        "std": 0.09591178336564844,
+        "values": [
+          0.7392964824120603,
+          0.8734999999999999,
+          0.6877
+        ]
+      }
+    },
+    "ppo_NoVelocity6": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 35.85166666666667,
+        "std": 1.9557692433754408,
+        "values": [
+          33.815,
+          37.715,
+          36.025
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.7170333333333334,
+        "std": 0.0391153848675088,
+        "values": [
+          0.6763,
+          0.7543000000000001,
+          0.7205
+        ]
+      }
+    },
+    "ppo_Relative5": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 33.85,
+        "std": 0.9364427371708307,
+        "values": [
+          33.79,
+          34.815,
+          32.945
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.6769999999999999,
+        "std": 0.01872885474341658,
+        "values": [
+          0.6758,
+          0.6962999999999999,
+          0.6589
+        ]
+      }
+    },
+    "random": {
+      "n_runs": 1,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.215,
+        "std": 0.0,
+        "values": [
+          0.215
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.69,
+        "std": 0.0,
+        "values": [
+          0.69
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.095,
+        "std": 0.0,
+        "values": [
+          0.095
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 308.28,
+        "std": 0.0,
+        "values": [
+          308.28
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 3.969767441860465,
+        "std": 0.0,
+        "values": [
+          3.969767441860465
+        ]
+      }
+    },
+    "scripted": {
+      "n_runs": 1,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 40.11,
+        "std": 0.0,
+        "values": [
+          40.11
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.8022,
+        "std": 0.0,
+        "values": [
+          0.8022
+        ]
+      }
+    }
+  },
+  "Random": {
+    "ppo_Absolute8": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.48,
+        "std": 0.09848857801796103,
+        "values": [
+          0.59,
+          0.4,
+          0.45
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.52,
+        "std": 0.09848857801796106,
+        "values": [
+          0.41,
+          0.6,
+          0.55
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 85.22666666666666,
+        "std": 16.56048711038819,
+        "values": [
+          71.94,
+          103.78,
+          79.96
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 1.0946525423728815,
+        "std": 0.15378095629625607,
+        "values": [
+          1.047457627118644,
+          1.2665000000000002,
+          0.97
+        ]
+      }
+    },
+    "ppo_NoVelocity6": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.45333333333333337,
+        "std": 0.00763762615825974,
+        "values": [
+          0.46,
+          0.445,
+          0.455
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.5466666666666667,
+        "std": 0.00763762615825974,
+        "values": [
+          0.54,
+          0.555,
+          0.545
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 81.255,
+        "std": 5.840057790809954,
+        "values": [
+          77.46,
+          87.98,
+          78.325
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 1.0014962663130713,
+        "std": 0.0939520251557381,
+        "values": [
+          0.9182608695652174,
+          1.1033707865168538,
+          0.982857142857143
+        ]
+      }
+    },
+    "ppo_Relative5": {
+      "n_runs": 3,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.965,
+        "std": 0.020000000000000018,
+        "values": [
+          0.985,
+          0.965,
+          0.945
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.035,
+        "std": 0.02,
+        "values": [
+          0.015,
+          0.035,
+          0.055
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 42.553333333333335,
+        "std": 1.186510991661406,
+        "values": [
+          41.445,
+          43.805,
+          42.41
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.8007331574442733,
+        "std": 0.01925293755395374,
+        "values": [
+          0.8078172588832487,
+          0.815440414507772,
+          0.778941798941799
+        ]
+      }
+    },
+    "random": {
+      "n_runs": 1,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 0.18,
+        "std": 0.0,
+        "values": [
+          0.18
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.71,
+        "std": 0.0,
+        "values": [
+          0.71
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.11,
+        "std": 0.0,
+        "values": [
+          0.11
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 294.05,
+        "std": 0.0,
+        "values": [
+          294.05
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 3.7527777777777778,
+        "std": 0.0,
+        "values": [
+          3.7527777777777778
+        ]
+      }
+    },
+    "scripted": {
+      "n_runs": 1,
+      "episodes_per_run": 200,
+      "success_rate": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "fall_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "timeout_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "mean_episode_length": {
+        "mean": 48.575,
+        "std": 0.0,
+        "values": [
+          48.575
+        ]
+      },
+      "mean_time_to_target_s": {
+        "mean": 0.9715,
+        "std": 0.0,
+        "values": [
+          0.9715
+        ]
+      }
+    }
+  }
+}
