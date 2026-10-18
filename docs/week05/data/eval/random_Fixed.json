@@ -1,0 +1,816 @@
+{
+  "policy": "random",
+  "model": null,
+  "obs_mode": "Absolute8",
+  "spawn_mode": "Fixed",
+  "seed": 12345,
+  "episodes": 200,
+  "success_rate": 0.215,
+  "fall_rate": 0.69,
+  "timeout_rate": 0.095,
+  "mean_episode_length": 308.28,
+  "mean_steps_to_target": 198.48837209302326,
+  "mean_time_to_target_s": 3.969767441860465,
+  "per_episode": [
+    {
+      "outcome": "fall",
+      "length": 287
+    },
+    {
+      "outcome": "success",
+      "length": 125
+    },
+    {
+      "outcome": "fall",
+      "length": 269
+    },
+    {
+      "outcome": "success",
+      "length": 183
+    },
+    {
+      "outcome": "fall",
+      "length": 250
+    },
+    {
+      "outcome": "fall",
+      "length": 263
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 291
+    },
+    {
+      "outcome": "fall",
+      "length": 226
+    },
+    {
+      "outcome": "fall",
+      "length": 215
+    },
+    {
+      "outcome": "success",
+      "length": 161
+    },
+    {
+      "outcome": "fall",
+      "length": 291
+    },
+    {
+      "outcome": "fall",
+      "length": 348
+    },
+    {
+      "outcome": "fall",
+      "length": 275
+    },
+    {
+      "outcome": "success",
+      "length": 302
+    },
+    {
+      "outcome": "success",
+      "length": 408
+    },
+    {
+      "outcome": "fall",
+      "length": 313
+    },
+    {
+      "outcome": "fall",
+      "length": 446
+    },
+    {
+      "outcome": "success",
+      "length": 117
+    },
+    {
+      "outcome": "fall",
+      "length": 368
+    },
+    {
+      "outcome": "fall",
+      "length": 299
+    },
+    {
+      "outcome": "fall",
+      "length": 366
+    },
+    {
+      "outcome": "fall",
+      "length": 359
+    },
+    {
+      "outcome": "fall",
+      "length": 241
+    },
+    {
+      "outcome": "fall",
+      "length": 436
+    },
+    {
+      "outcome": "success",
+      "length": 341
+    },
+    {
+      "outcome": "success",
+      "length": 192
+    },
+    {
+      "outcome": "fall",
+      "length": 332
+    },
+    {
+      "outcome": "fall",
+      "length": 369
+    },
+    {
+      "outcome": "fall",
+      "length": 263
+    },
+    {
+      "outcome": "success",
+      "length": 131
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 355
+    },
+    {
+      "outcome": "fall",
+      "length": 333
+    },
+    {
+      "outcome": "fall",
+      "length": 257
+    },
+    {
+      "outcome": "fall",
+      "length": 234
+    },
+    {
+      "outcome": "fall",
+      "length": 340
+    },
+    {
+      "outcome": "success",
+      "length": 381
+    },
+    {
+      "outcome": "fall",
+      "length": 341
+    },
+    {
+      "outcome": "fall",
+      "length": 297
+    },
+    {
+      "outcome": "fall",
+      "length": 344
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 388
+    },
+    {
+      "outcome": "fall",
+      "length": 402
+    },
+    {
+      "outcome": "fall",
+      "length": 423
+    },
+    {
+      "outcome": "fall",
+      "length": 244
+    },
+    {
+      "outcome": "success",
+      "length": 119
+    },
+    {
+      "outcome": "fall",
+      "length": 221
+    },
+    {
+      "outcome": "fall",
+      "length": 445
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 299
+    },
+    {
+      "outcome": "fall",
+      "length": 313
+    },
+    {
+      "outcome": "fall",
+      "length": 196
+    },
+    {
+      "outcome": "fall",
+      "length": 268
+    },
+    {
+      "outcome": "fall",
+      "length": 331
+    },
+    {
+      "outcome": "fall",
+      "length": 227
+    },
+    {
+      "outcome": "fall",
+      "length": 268
+    },
+    {
+      "outcome": "fall",
+      "length": 329
+    },
+    {
+      "outcome": "success",
+      "length": 151
+    },
+    {
+      "outcome": "fall",
+      "length": 274
+    },
+    {
+      "outcome": "fall",
+      "length": 341
+    },
+    {
+      "outcome": "fall",
+      "length": 476
+    },
+    {
+      "outcome": "fall",
+      "length": 462
+    },
+    {
+      "outcome": "success",
+      "length": 131
+    },
+    {
+      "outcome": "success",
+      "length": 150
+    },
+    {
+      "outcome": "success",
+      "length": 276
+    },
+    {
+      "outcome": "fall",
+      "length": 479
+    },
+    {
+      "outcome": "fall",
+      "length": 430
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 366
+    },
+    {
+      "outcome": "fall",
+      "length": 292
+    },
+    {
+      "outcome": "fall",
+      "length": 327
+    },
+    {
+      "outcome": "fall",
+      "length": 296
+    },
+    {
+      "outcome": "fall",
+      "length": 399
+    },
+    {
+      "outcome": "fall",
+      "length": 281
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "success",
+      "length": 141
+    },
+    {
+      "outcome": "success",
+      "length": 255
+    },
+    {
+      "outcome": "fall",
+      "length": 402
+    },
+    {
+      "outcome": "success",
+      "length": 450
+    },
+    {
+      "outcome": "fall",
+      "length": 318
+    },
+    {
+      "outcome": "fall",
+      "length": 261
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 345
+    },
+    {
+      "outcome": "fall",
+      "length": 253
+    },
+    {
+      "outcome": "success",
+      "length": 134
+    },
+    {
+      "outcome": "fall",
+      "length": 229
+    },
+    {
+      "outcome": "fall",
+      "length": 272
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 237
+    },
+    {
+      "outcome": "fall",
+      "length": 385
+    },
+    {
+      "outcome": "fall",
+      "length": 322
+    },
+    {
+      "outcome": "fall",
+      "length": 378
+    },
+    {
+      "outcome": "fall",
+      "length": 244
+    },
+    {
+      "outcome": "fall",
+      "length": 306
+    },
+    {
+      "outcome": "fall",
+      "length": 335
+    },
+    {
+      "outcome": "fall",
+      "length": 255
+    },
+    {
+      "outcome": "fall",
+      "length": 385
+    },
+    {
+      "outcome": "fall",
+      "length": 343
+    },
+    {
+      "outcome": "fall",
+      "length": 297
+    },
+    {
+      "outcome": "success",
+      "length": 199
+    },
+    {
+      "outcome": "fall",
+      "length": 237
+    },
+    {
+      "outcome": "fall",
+      "length": 443
+    },
+    {
+      "outcome": "success",
+      "length": 110
+    },
+    {
+      "outcome": "fall",
+      "length": 400
+    },
+    {
+      "outcome": "fall",
+      "length": 278
+    },
+    {
+      "outcome": "fall",
+      "length": 306
+    },
+    {
+      "outcome": "fall",
+      "length": 288
+    },
+    {
+      "outcome": "fall",
+      "length": 250
+    },
+    {
+      "outcome": "fall",
+      "length": 262
+    },
+    {
+      "outcome": "fall",
+      "length": 305
+    },
+    {
+      "outcome": "fall",
+      "length": 240
+    },
+    {
+      "outcome": "fall",
+      "length": 340
+    },
+    {
+      "outcome": "success",
+      "length": 286
+    },
+    {
+      "outcome": "fall",
+      "length": 399
+    },
+    {
+      "outcome": "fall",
+      "length": 337
+    },
+    {
+      "outcome": "success",
+      "length": 76
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "success",
+      "length": 173
+    },
+    {
+      "outcome": "fall",
+      "length": 441
+    },
+    {
+      "outcome": "fall",
+      "length": 314
+    },
+    {
+      "outcome": "fall",
+      "length": 341
+    },
+    {
+      "outcome": "fall",
+      "length": 247
+    },
+    {
+      "outcome": "fall",
+      "length": 258
+    },
+    {
+      "outcome": "success",
+      "length": 92
+    },
+    {
+      "outcome": "fall",
+      "length": 361
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 250
+    },
+    {
+      "outcome": "success",
+      "length": 70
+    },
+    {
+      "outcome": "success",
+      "length": 392
+    },
+    {
+      "outcome": "fall",
+      "length": 364
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 251
+    },
+    {
+      "outcome": "fall",
+      "length": 310
+    },
+    {
+      "outcome": "fall",
+      "length": 380
+    },
+    {
+      "outcome": "fall",
+      "length": 228
+    },
+    {
+      "outcome": "fall",
+      "length": 294
+    },
+    {
+      "outcome": "fall",
+      "length": 261
+    },
+    {
+      "outcome": "fall",
+      "length": 234
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "success",
+      "length": 132
+    },
+    {
+      "outcome": "success",
+      "length": 172
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 322
+    },
+    {
+      "outcome": "success",
+      "length": 119
+    },
+    {
+      "outcome": "fall",
+      "length": 216
+    },
+    {
+      "outcome": "fall",
+      "length": 278
+    },
+    {
+      "outcome": "fall",
+      "length": 202
+    },
+    {
+      "outcome": "success",
+      "length": 169
+    },
+    {
+      "outcome": "success",
+      "length": 123
+    },
+    {
+      "outcome": "fall",
+      "length": 491
+    },
+    {
+      "outcome": "success",
+      "length": 54
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 482
+    },
+    {
+      "outcome": "fall",
+      "length": 321
+    },
+    {
+      "outcome": "fall",
+      "length": 321
+    },
+    {
+      "outcome": "fall",
+      "length": 329
+    },
+    {
+      "outcome": "fall",
+      "length": 288
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "success",
+      "length": 259
+    },
+    {
+      "outcome": "fall",
+      "length": 355
+    },
+    {
+      "outcome": "fall",
+      "length": 231
+    },
+    {
+      "outcome": "success",
+      "length": 98
+    },
+    {
+      "outcome": "fall",
+      "length": 285
+    },
+    {
+      "outcome": "fall",
+      "length": 192
+    },
+    {
+      "outcome": "fall",
+      "length": 329
+    },
+    {
+      "outcome": "fall",
+      "length": 367
+    },
+    {
+      "outcome": "fall",
+      "length": 271
+    },
+    {
+      "outcome": "fall",
+      "length": 416
+    },
+    {
+      "outcome": "fall",
+      "length": 258
+    },
+    {
+      "outcome": "success",
+      "length": 462
+    },
+    {
+      "outcome": "fall",
+      "length": 321
+    },
+    {
+      "outcome": "success",
+      "length": 259
+    },
+    {
+      "outcome": "fall",
+      "length": 220
+    },
+    {
+      "outcome": "success",
+      "length": 125
+    },
+    {
+      "outcome": "success",
+      "length": 435
+    },
+    {
+      "outcome": "success",
+      "length": 169
+    },
+    {
+      "outcome": "success",
+      "length": 195
+    },
+    {
+      "outcome": "fall",
+      "length": 436
+    },
+    {
+      "outcome": "fall",
+      "length": 415
+    },
+    {
+      "outcome": "fall",
+      "length": 365
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 352
+    },
+    {
+      "outcome": "fall",
+      "length": 458
+    },
+    {
+      "outcome": "success",
+      "length": 142
+    },
+    {
+      "outcome": "fall",
+      "length": 198
+    },
+    {
+      "outcome": "fall",
+      "length": 251
+    },
+    {
+      "outcome": "fall",
+      "length": 245
+    },
+    {
+      "outcome": "fall",
+      "length": 238
+    },
+    {
+      "outcome": "success",
+      "length": 76
+    },
+    {
+      "outcome": "fall",
+      "length": 437
+    },
+    {
+      "outcome": "fall",
+      "length": 236
+    },
+    {
+      "outcome": "fall",
+      "length": 363
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 271
+    },
+    {
+      "outcome": "timeout",
+      "length": 500
+    },
+    {
+      "outcome": "fall",
+      "length": 406
+    },
+    {
+      "outcome": "fall",
+      "length": 256
+    },
+    {
+      "outcome": "fall",
+      "length": 228
+    }
+  ]
+}
