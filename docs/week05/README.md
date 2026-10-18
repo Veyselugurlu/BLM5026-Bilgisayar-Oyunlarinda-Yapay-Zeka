@@ -51,7 +51,7 @@ python -m pip install ./ml-agents
 
 **Aktivite 1, environment manifest:** [environment_manifest.md](environment_manifest.md). Not: Python trainer sürümü tahmin edilmedi, kaynaktan okundu: `1.2.0.dev0`. Proje Unity Package Registry'deki `com.unity.ml-agents 4.1.0` paketini kullanıyor. Bu paketin `Runtime/` klasörünün, sabitlenen kaynak commit'iyle birebir aynı olduğu `diff` ile doğrulandı (yalnızca satır sonları farklı).
 
-**Aktivite 2, ilk eğitimin teşhisi:** Basic sahnesi build edildi ve `config/ppo/Basic.yaml` ile eğitildi ([log kanıtı](data/basic_training_evidence.txt)):
+**Aktivite 2, ilk eğitimin teşhisi:** Basic sahnesi build edildi ve [config/basic_short.yaml](../../config/basic_short.yaml) ile eğitildi. Bu dosya resmi `config/ppo/Basic.yaml` ile aynı; yalnızca `max_steps` 500.000 yerine 40.000 ([log kanıtı](data/basic_training_evidence.txt)):
 1. `Connected to Unity environment with package version 4.1.0 and communication version 1.5.0`
 2. Adım ilerlemesi: `Step: 2000 … Mean Reward: 0.129` → `Step: 12000 … Mean Reward: 0.925`
 3. `results/Basic_U63_01/` altında `Basic.onnx`, checkpoint, TensorBoard event dosyası ve `configuration.yaml` üretildi

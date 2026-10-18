@@ -53,3 +53,6 @@ __pycache__/
 # empty folder created by the editor
 /Assets/Resources/
 /Assets/Resources.meta
+
+# Word lock files
+~$*
