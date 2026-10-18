@@ -89,6 +89,8 @@ Sahne, [RollerBallSceneBuilder.cs](../../Assets/MLAgentsCourse/Editor/RollerBall
 | `OnActionReceived` | `AddForce(new Vector3(a0, 0, a1) * 10)`. Mesafe < 1.4 ise `SetReward(1)` + `EndEpisode()`, y < −1 ise `EndEpisode()` | Aksiyon bir **kuvvet**, konum değil. Momentumu fizik motoru hesaplıyor |
 | `Heuristic` | WASD / ok tuşları → 2 aksiyon (`Keyboard.current`, yeni Input System) | Eğitimden önce ortamın doğru çalıştığını elle test etmek için |
 
+**Aktivite 4, Heuristic testi:** Behavior Type = Heuristic Only yapılıp top WASD ile sürüldü. Hareket, hedefe ulaşınca başarı ve sıfırlanma, düşünce sıfırlanma senaryolarının üçü de doğru çalıştı.
+
 ![Gözlem vektörü](images/diagram_observation_vector.png)
 
 **Behavior Parameters (C#, YAML ve model arasındaki sözleşme):** Behavior Name `RollerBall_U63` · Vector Observation Space Size `8` · Continuous Actions `2` · Discrete Branches `0` · Decision Period `1` · Max Step `500`.
