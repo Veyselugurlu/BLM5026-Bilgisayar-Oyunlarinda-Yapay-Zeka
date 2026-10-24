@@ -14,7 +14,7 @@ Bir oyun karakterine bir işi **kuralları kodlamadan, deneme yanılma ile öğr
 
 | Ne | Sonuç |
 |---|---|
-| Sunu 1: kurulum | Unity 6000.3.25f1, ML-Agents 4.1.0, Python 3.10.12, kaynak commit `ee0a08c` doğrulandı ([manifest](environment_manifest.md)) |
+| Sunu 1: kurulum | Unity 6000.3.25f1, ML-Agents 4.1.0, Python 3.10.12, kaynak commit `ee0a08c` doğrulandı (bölüm 3) |
 | Sunu 1: Basic örneği | PPO 12.000 adımda teorik en iyi ödüle (0.93) ulaştı |
 | Sunu 2: RollerAgent | Kendi RL ortamımız sıfırdan kuruldu, eğitildi, ONNX modeli Unity'de çalıştırıldı |
 | Değerlendirme | Eğitimsiz rastgele politika **%21.5**, eğitilmiş PPO **%93.2 ± 11.4** (3 seed), en iyi seed **%100** |
@@ -47,7 +47,19 @@ python -m pip install ./ml-agents-envs
 python -m pip install ./ml-agents
 ```
 
-**Aktivite 1, environment manifest:** [environment_manifest.md](environment_manifest.md). Not: Python trainer sürümü tahmin edilmedi, kaynaktan okundu: `1.2.0.dev0`. Proje Unity Package Registry'deki `com.unity.ml-agents 4.1.0` paketini kullanıyor. Bu paketin `Runtime/` klasörünün, sabitlenen kaynak commit'iyle birebir aynı olduğu `diff` ile doğrulandı (yalnızca satır sonları farklı).
+**Aktivite 1, environment manifest:**
+
+| Bileşen | Sürüm |
+|---|---|
+| Unity Editor | 6000.3.25f1 |
+| Unity ML-Agents paketi | 4.1.0 (Unity Package Registry) |
+| Kaynak commit | `ee0a08ccae597094003844d0121317f9790a1676` (package.json: 4.1.0) |
+| Python | 3.10.12 |
+| mlagents / mlagents-envs | 1.2.0.dev0 (aynı kaynaktan: önce `./ml-agents-envs`, sonra `./ml-agents`) |
+| torch / onnx / protobuf / grpcio / numpy | 2.8.0+cpu / 1.15.0 / 3.20.3 / 1.53.2 / 1.23.5 |
+| `mlagents-learn --help` | OK |
+
+Not: Python trainer sürümü tahmin edilmedi, kaynaktan okundu: `1.2.0.dev0`. Proje Unity Package Registry'deki `com.unity.ml-agents 4.1.0` paketini kullanıyor. Bu paketin `Runtime/` klasörünün, sabitlenen kaynak commit'iyle birebir aynı olduğu `diff` ile doğrulandı (yalnızca satır sonları farklı).
 
 **Aktivite 2, ilk eğitimin teşhisi:** Basic sahnesi build edildi ve [config/basic_short.yaml](../../config/basic_short.yaml) ile eğitildi. Bu dosya resmi `config/ppo/Basic.yaml` ile aynı; yalnızca `max_steps` 500.000 yerine 40.000 ([log kanıtı](data/basic_training_evidence.txt)):
 1. `Connected to Unity environment with package version 4.1.0 and communication version 1.5.0`
